@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Section2_IPG521.Models.Papers>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PaperId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.paperTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaperDateSubmitted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TopicId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaperId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.paperTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaperDateSubmitted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TopicId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PaperId }, new { @class = "btn btn-warning"}) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PaperId }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>SACLA Conference Paper Management System</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Welcome to SACLA</h2>
+        <p>
+            This was a sample application that was created for assessment purposes as part of the CSIS3734
+            /CSIQ3734 module. All righs reserved.
+        </p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>News</h2>
+        <p>Visit our news page to find out what is going on.</p>
+        <p><a>@Html.ActionLink("See latest news", "About", "Home") &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Contact Us</h2>
+        <p>Give is a call or drop us a email to find out more about upcoming conferences and workshops.</p>
+        <p><a>@Html.ActionLink("See contact details", "Contact", "Home") &raquo;</a></p>
+    </div>
+</div>
